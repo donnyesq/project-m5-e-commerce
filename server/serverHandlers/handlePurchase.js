@@ -24,7 +24,7 @@ const handlePurchase = (req, res) => {
         }
       }
 
-      if (!error) {
+      if (!error && element._id === Number(id)) {
         element.numInStock -= quantity;
         newOrder[id] = quantity;
       }
